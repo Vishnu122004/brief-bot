@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
+	<meta name="created" content="2024-07-09T20:31:21.522848331"/>
+	<meta name="changed" content="2024-07-09T20:33:56.542191011"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
+		a:link { color: #000080; text-decoration: underline }
+		a:visited { color: #800000; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-IN" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0cm">
+&lt;!DOCTYPE html&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;html lang=&quot;en&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;head&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;meta
+charset=&quot;UTF-8&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;meta
+name=&quot;viewport&quot; content=&quot;width=device-width,
+initial-scale=1.0&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;title&gt;Text
+Summarizer&lt;/title&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;link
+rel=&quot;stylesheet&quot;
+href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;script
+src=&quot;https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js&quot;
+integrity=&quot;sha512-7dlzSK4Ulfm85ypS8/ya0xLf3NpXiML3s6HTLu4qDq7WiJWtLLyrXb9putdP3/1umwTmzIvhuu9EW7gHYSVtCQ==&quot;
+crossorigin=&quot;anonymous&quot;
+referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;style&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        /* Your
+existing CSS */</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;/style&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/head&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;body&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;!-- Your
+existing HTML content --&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;div
+class=&quot;container&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        &lt;h1
+class=&quot;title&quot;&gt;INPUT TEXT&lt;/h1&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        &lt;textarea
+id=&quot;inputText&quot; class=&quot;input-text&quot;
+placeholder=&quot;Enter your text here...&quot;&gt;&lt;/textarea&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        &lt;div
+class=&quot;buttons&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;input
+type=&quot;file&quot; id=&quot;fileInput&quot; class=&quot;hidden&quot;
+accept=&quot;.txt&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;button
+class=&quot;button&quot; onclick=&quot;uploadText()&quot;&gt;Upload
+Text&lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;button
+class=&quot;button&quot; onclick=&quot;summarizeText()&quot;&gt;Summarize&lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        &lt;h2
+class=&quot;summary-title&quot;&gt;SUMMARY&lt;/h2&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        &lt;p
+id=&quot;summaryText&quot; class=&quot;summary-text&quot;&gt;&lt;/p&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        &lt;button
+class=&quot;small-button&quot; onclick=&quot;copySummary()&quot;&gt;Copy
+Summary&lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        &lt;button
+class=&quot;small-button&quot;
+onclick=&quot;resetSummarizer()&quot;&gt;New&lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        &lt;h2
+class=&quot;senti-title&quot;&gt;SENTIMENT ANALYSIS&lt;/h2&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        &lt;p
+id=&quot;senti-title&quot; class=&quot;senti-text&quot;&gt;&lt;/p&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        function
+uploadText() {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+fileInput = document.getElementById('fileInput');</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+fileInput.click();</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+fileInput.onchange = function() {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+const file = fileInput.files[0];</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+const reader = new FileReader();</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+reader.onload = function(e) {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+document.getElementById('inputText').value = e.target.result;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                };</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+reader.readAsText(file);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            };</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        function
+summarizeText() {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            let
+inputText = document.getElementById('inputText').value;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+fetch('/summarize', {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+method: 'POST',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+headers: {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+'Content-Type': 'application/json',</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+body: JSON.stringify({ text: inputText }),</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            })</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+.then(response =&gt; response.json())</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+.then(data =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+document.getElementById('summaryText').innerText = data.summary;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+document.getElementById('senti-title').innerText = data.sentiment;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            })</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+.catch(error =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+console.error('Error:', error);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            });</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        function
+copySummary() {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+summaryText = document.getElementById('summaryText').innerText;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+navigator.clipboard.writeText(summaryText).then(() =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+alert('Summary copied to clipboard');</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+}).catch(err =&gt; {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+alert('Failed to copy summary');</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            });</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        function
+resetSummarizer() {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+document.getElementById('inputText').value = '';</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+document.getElementById('summaryText').innerText = '';</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+document.getElementById('senti-title').innerText = '';</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;/script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/body&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/html&gt;</p>
+</body>
+</html>
